@@ -1,7 +1,7 @@
 # OpenLearning
 ## Introduction
 Open learning is a string pattern matcher than can learn to find regularities into strings.
-To use this you will need a database to "normal strings" like:
+To use this you will need a dataset of "normal strings" like:
 ### normal.txt
 ```
 Apple Tree
@@ -10,7 +10,7 @@ Pen Pineapple Apple Pen
 Cury Rice
 French fries
 ```
-And a noise dataset that contains the thing you want to search:
+And a dataset that contains the thing you want to search:
 ### dataset.txt
 ```
 Apple pie
@@ -20,28 +20,40 @@ Pineapple pie
 Strawberries tart
 ```
 And you will get a train dataset:
-```
-open_learning
+```shell
+$ open_learning learn
 ```
 #### model.txt
 ```
 ["apple pie", " cake"]
 ```
 And now we can test with an example:
-```
-$ open_learning "cheese cake"
-Intialized in 0.031245ms
-Search done in 0.022149ms
-Correspond True
+```shell
+$ open_learning test "cheese cake"
+   Reading Done in 0ms
+   Correspond true
 ```
 As you can see it correspond with the model.
-```
-$ open_learning "Apple juice"
-Intialized in 0.031245ms
-Search done in 0.022149ms
-Correspond False
+```shell
+$ open_learning test "Apple juice"
+   Reading Done in 0ms
+   Correspond false
 ```
 It work's fine.
+
+## Command usage
+```shell
+$ open_learning learn [-d DATASET-FILE] [-n NORMAL-FILE] [-o MODEL-OUTPUT-FILE]
+
+$ open_learning test [-i INPUT-FILE] <INPUT-STRING>
+```
+
+### Examples
+```shell
+$ open_learning learn -d "dataset.txt" -n "normal.txt" -o "model.txt"
+
+$ open_learning test -i "model.txt" "Apple pen"
+```
 
 ## Integration into programs
 
@@ -50,3 +62,16 @@ It work's fine.
 ## Why rust ?
 
 I have chosen rust for four reasons: performance, safety, ecosystem, concurrency
+
+## Download executables
+
+Linux executable: [0.1.0beta](https://rs.mcalts.fr/OpenLearning/0.1.0/open_learning)
+
+## Compile from source
+
+Download the OpenLearning folder and run into it:
+```shell
+$ cargo build --release
+```
+
+Rust is needed: [Download rust](https://www.rust-lang.org/tools/install)
