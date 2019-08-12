@@ -2,7 +2,7 @@
 ## Introduction
 Open learning is a string pattern matcher than can learn to find regularities into strings.
 To use this you will need a dataset of "normal strings" like:
-### normal.txt
+### *normal.txt*
 ```
 Apple Tree
 Banana Split
@@ -11,7 +11,7 @@ Cury Rice
 French fries
 ```
 And a dataset that contains the thing you want to search:
-### dataset.txt
+### *dataset.txt*
 ```
 Apple pie
 Banana cake
@@ -23,7 +23,7 @@ And you will get a train dataset:
 ```shell
 $ open_learning learn
 ```
-#### model.txt
+### *model.txt*
 ```
 ["apple pie", " cake"]
 ```
