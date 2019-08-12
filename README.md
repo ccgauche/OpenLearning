@@ -75,3 +75,26 @@ $ cargo build --release
 ```
 
 Rust is needed: [Download rust](https://www.rust-lang.org/tools/install)
+
+## Futures features (in progress)
+
+Console colorized Learner [DONE]
+Linear String matching [DONE]
+Positional String matching [TO DO]
+Patern string matching [TO DO]
+Semantic matching [TO DO]
+
+Error Percentage Calculator [TO DO]
+Valid Percentage Calculator [TO DO]
+More validity and more error option [TO DO]
+
+More examples [TO DO]
+
+Rust Font-End [DONE]
+JS Font-End [TO DO]
+Python Font-End [TO DO]
+Java Font-End [TO DO]
+
+Specify specification [TO DO]
+
+
